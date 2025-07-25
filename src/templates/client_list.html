@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Client 列表{% endblock %}
+{% block content %}
+<h1>已註冊的 Clients</h1>
+<a href="{{ url_for('new_client_view') }}" class="btn btn-primary mb-3">新增 Client</a>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Client Name</th>
+      <th>Client ID</th>
+      <th>Client Secret</th>
+      <th>Redirect URIs</th>
+      <th>Scope</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for client in clients %}
+    <tr>
+      <td>{{ client.client_name }}</td>
+      <td>{{ client.client_id }}</td>
+      <td>{{ client.client_secret }}</td>
+      <td>{{ client.redirect_uris }}</td>
+      <td>{{ client.scope }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

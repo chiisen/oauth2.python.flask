@@ -1,0 +1,14 @@
+[project]
+name = "src"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask",             # Web 框架，建立 API 與網頁
+    "authlib",           # OAuth2 實作與授權流程
+    "pymysql",           # MySQL 資料庫連線驅動
+    "sqlalchemy",        # ORM，資料庫模型管理
+    "flask_sqlalchemy",  # Flask 整合 SQLAlchemy
+    "werkzeug"           # WSGI 工具，Flask 內部依賴
+]

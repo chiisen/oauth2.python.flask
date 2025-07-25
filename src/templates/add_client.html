@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}新增 Client{% endblock %}
+
+{% block content %}
+  <h1>新增 Client</h1>
+  <form method="post">
+    <div class="mb-3">
+      <label for="client_name" class="form-label">Client Name</label>
+      <input type="text" class="form-control" id="client_name" name="client_name" required>
+    </div>
+    <div class="mb-3">
+      <label for="redirect_uri" class="form-label">Redirect URI</label>
+      <input type="text" class="form-control" id="redirect_uri" name="redirect_uri" required>
+    </div>
+    <div class="mb-3">
+      <label for="scope" class="form-label">Scope（選填）</label>
+      <input type="text" class="form-control" id="scope" name="scope">
+    </div>
+    <button type="submit" class="btn btn-success">建立</button>
+    <a href="{{ url_for('list_clients_view') }}" class="btn btn-secondary">取消</a>
+  </form>
+{% endblock %}
